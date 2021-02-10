@@ -1,12 +1,56 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import GlobalStyle from './assets/stylesheets/global'
+import {
+  BrowserRouter as Router, 
+  Switch,
+  Route
+} from 'react-router-dom'
+import Home from './pages/Home';
+import Query from './pages/Query'
+
+import styled from 'styled-components'
+import Navbar from './components/common/Navbar';
+
+const ContentWrapper = styled.div`
+  height: 94vh;
+`
+
+const RouteWrapper = function({ children, ...rest}) {
+  return(
+    <Route {...rest}>
+      <ContentWrapper>
+        {children}
+      </ContentWrapper>
+    </Route>
+  )
+}
+
+const ApplicationRoutes = function() {
+  return (
+    <Router>
+      <Navbar />
+
+      <Switch>
+        <RouteWrapper exact path="/">
+          <Home />
+        </RouteWrapper>
+        <RouteWrapper path="/query">
+          <Query />
+        </RouteWrapper>
+        <RouteWrapper path="*">
+          <div>404</div>
+        </RouteWrapper>
+      </Switch>
+    </Router>
+  )
+}
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <GlobalStyle />
+    <ApplicationRoutes />
   </React.StrictMode>,
   document.getElementById('root')
 );
