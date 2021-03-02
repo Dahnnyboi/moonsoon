@@ -8,6 +8,35 @@ import {
 
 export const coldAnimation = keyframes`
     0% {
+        color: ${transColdColor};
+        opacity: 0.5;
+    }
+    25% {
+        color: ${transColdColor};
+        opacity: 1;
+    }
+    100% {
+        color: ${coldColor};
+    }
+`
+
+export const warmAnimation = keyframes`
+    0% {
+        color: ${transWarmColor};
+        opacity: 0.5;
+    }
+    25% {
+        color: ${transWarmColor};
+        opacity: 1;
+    }
+    100%{
+        color: ${warmColor};
+    }
+`
+
+
+export const coldAnimationBg = keyframes`
+    0% {
         background-color: ${transColdColor};
         opacity: 0.5;
     }
@@ -20,7 +49,7 @@ export const coldAnimation = keyframes`
     }
 `
 
-export const warmAnimation = keyframes`
+export const warmAnimationBg = keyframes`
     0% {
         background-color: ${transWarmColor};
         opacity: 0.5;

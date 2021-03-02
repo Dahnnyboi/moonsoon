@@ -12,7 +12,7 @@ export const FOURK_SCREEN = '2560px'
 // Colors
 export const coldColor = '#6b46ff'
 export const transColdColor = '#856de6'
-export const warmColor = '#ffb546'
+export const warmColor = '#f0aa41'
 export const transWarmColor = '#e6b66d'
 export const whiteColor = '#fefefe';
 export const blackColor = '#050505';

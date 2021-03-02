@@ -7,18 +7,10 @@ import {
 } from './constants'
 
 const Wrapper = styled.div`
-    width: 100%;
-    margin: 0 auto;
-
+    width: 91.63%;  
     height: 100%;
+    margin: 0 auto;
     
-    @media(min-width: ${TABLET_SCREEN}){
-        display: ${props => props.display || 'block'};
-        align-items: ${props => props.alignItems || 'center'};
-        justify-content: ${props => props.justifyContent || 'flex-start'};
-        width: 91.63%
-    }
-
     @media(min-width: ${SMALL_LAPTOP_SCREEN}){
         width: 83.33%
     }
